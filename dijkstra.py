@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 labels = list("12345678")
 routers = 8
-path = 'C:\\Users\\Andy\\Desktop\\Network.csv'
+path = 'C:\\Users\\Andy\\Desktop\\Network.csv' # modificar según sea necesario
 
 # Load csv info
 data = pd.read_csv(path, sep=';', header=None, dtype=str)
@@ -28,11 +28,7 @@ costos = data.loc[nodo_analizar].to_numpy()
 for i in range(routers):
     if costos[i] != np.inf:
         prev_hop[i] = int(nodo_analizar)
-print(prev_hop)
-
 # Loop
-
-
 while(sorted(nodos_analizados) != nodos):
     min_cost = np.inf
     nodo_menor = None
@@ -46,7 +42,6 @@ while(sorted(nodos_analizados) != nodos):
 
     # Añadir W a N'
     nodo_analizar = nodo_menor
-    print(f'El nodo a analizar es {nodo_analizar}')
     nodos_analizados.append(nodo_analizar)
     nodos_analizar.remove(nodo_analizar)
 
@@ -60,8 +55,7 @@ while(sorted(nodos_analizados) != nodos):
             costos[i] = costos_nodo_analizar[i]
             prev_hop[i] = ord(nodo_analizar) - ord('1') + 1
 
-print(f'El resultado de costos es el siguiente:\n {costos} \n {prev_hop}')
-
+# Impresión de resultados
 tabla_rutas = pd.DataFrame({
     'Destino':    labels,
     'Coste':      costos,
