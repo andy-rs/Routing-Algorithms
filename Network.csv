@@ -1,0 +1,8 @@
+0;1;5;np.inf;np.inf;np.inf;np.inf;np.inf
+1;0;2;9;np.inf;np.inf;np.inf;np.inf
+5;2;0;np.inf;2;np.inf;np.inf;np.inf
+np.inf;9;np.inf;0;3;4;np.inf;np.inf
+np.inf;np.inf;2;3;0;np.inf;9;np.inf
+np.inf;np.inf;np.inf;4;np.inf;0;1;9
+np.inf;np.inf;np.inf;np.inf;9;1;0;3
+np.inf;np.inf;np.inf;np.inf;np.inf;9;3;0
